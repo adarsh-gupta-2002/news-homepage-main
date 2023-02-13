@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+:root{
+    --soft-orange:hsl(35, 77%, 62%);
+    --soft-red:hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue:hsl(233, 8%, 79%);
+    --dark-grayish-blue:hsl(236, 13%, 42%);
+    --vary-dark-blue:hsl(240, 100%, 5%);
+}
+
+body{
+    font-size: 13px;
+    color: var(--vary-dark-blue);
+}
+.container{
+    max-width: 300px;
+    padding: 0 10px;
+    margin-inline: auto;
+     
+}
+
+/* header */
+
+.nav{
+    
+    position: absolute;
+    height: 100vh;
+    background: #fff;
+    width: 70%;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.nav .menu-btn{
+     
+    position: absolute;
+    right:1.2rem;
+    top: 1.2rem;
+}
+.nav ul{
+    font-size: 14px;
+    
+    margin: 7rem 1rem 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+
+.menu-open{
+    background-color: hsla(240, 22%, 65%, 0.3);
+}
+.menu-open picture img{
+    opacity: 0.6;
+}
+
+ul{
+    list-style: none;
+ 
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--vary-dark-blue);
+    
+}
+ul li a:hover{
+    cursor: pointer;
+    color: var(--soft-orange);
+}
+
+.show{
+    display: none;
+}
+
+/* header */
+.header{
+     
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 10px 1.5em;
+    position: relative;
+
+}
+
+.logo img{
+    width: 2rem;
+}
+
+/* hero image */
+picture img{
+    width: 100%;
+    
+}
+
+
+/* button */
+button{
+    background: transparent;
+    border: none;
+}
+.btn{
+    background: var(--soft-red);
+    border: none;
+    color: #fff;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin:30px 0px;
+
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--vary-dark-blue);
+}
+
+.menu-btn img{
+     
+    width: 1.6rem;
+}
+
+/* typography */
+h1{
+    font-size: 1.9rem;
+    line-height: 1;
+    margin-bottom: 0.4em;
+}
+p{
+    line-height: 1.6;
+}
+
+
+/* new section */
+.new{
+    
+    background: var(--vary-dark-blue);
+    padding: 1.2em;
+    margin: 1em 0;
+    
+}
+.new h2 {
+
+    color: var(--soft-orange);
+    
+}
+
+.new h3{
+    color:#fff;
+}
+.new h3:hover{
+    cursor: pointer;
+    color: var(--soft-orange);
+}
+
+.new p{
+    color: var(--grayish-blue);    
+    margin: 0.8em 0;
+}
+.new div{
+      
+    padding: 2em 0;
+    border-bottom: 1px solid var(--grayish-blue);
+}
+
+.new div:nth-child(4){
+    padding-bottom: 0;
+    border: none;
+}
+
+
+/* card */
+.card-container{
+    margin: 3em 0;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    margin-inline: auto;
+}
+.card img{
+    width: 85px;
+}
+.card{
+    display: flex;
+    gap: 15px
+
+}
+
+.card h2 {
+    color: var(--grayish-blue);
+     
+}
+
+.card h3{
+    margin: 0.5em 0;
+}
+.card h3:hover{
+    color: var(--soft-red);
+    cursor: pointer;
+     
+}
+
+@media(width>1050px){
+    .logo img{
+        width: 2.3rem;
+    }
+   .header{
+      
+     margin-top: 3rem;
+    }
+  
+    h1{
+        font-size: 2.3rem;
+        line-height: 1.1;
+        margin: 0;
+    }
+    .container{
+        max-width: 1050px;
+      
+    }
+
+    .menu-btn{
+        display: none;
+    }
+
+    .nav{
+        display: unset;
+        position: unset;
+        height: unset;
+        width: auto;
+        
+       
+
+    }
+    .nav ul{
+        flex-direction: row;
+        margin: 0;
+        
+         
+        
+    }
+    .hero{
+        display: flex;
+        gap: 1.5rem;
+
+    }
+    .hero .content{
+        display: flex;
+        margin-top: 1rem;
+       
+        max-width: 720px;
+        gap: 1.5rem;
+        
+
+    }
+    .hero .content .btn{
+        margin-bottom: 0;
+    }
+
+    picture img{
+        width: 720px;
+        
+    }
+    
+
+    .new{
+        margin: 0;
+        width: 370px;
+    }
+    .card-container{
+        flex-direction: row;
+    }
+
+}
